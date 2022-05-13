@@ -9,16 +9,11 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: ListView(
-      children: [
-        Container(
-          height: 50,
-          color: Colors.blue,
-          child: Text('test1'),
-        ),
-        const ListItem(),
-        const Text('test1'),
-        const Text('test2'),
-        const Text('test3'),
+      children: const [
+        ListItem(title: 'test10'),
+        Text('test1'),
+        Text('test2'),
+        Text('test3'),
       ],
     ));
   }
