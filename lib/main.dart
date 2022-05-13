@@ -4,6 +4,13 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 // 値（ここでは "Hello world"）を格納する「プロバイダ」を作成します。
 // プロバイダを使うことで値のモックやオーバーライドが可能になります。
 final helloWorldProvider = Provider((_) => 'Hello world');
+// final myProvider = Provider((ref) {
+//   return i;
+// });
+// final refProvider = Provider<int>((ref) {
+//   final repository = ref.watch(myProvider);
+//   return;
+// });
 
 void main() {
   runApp(
