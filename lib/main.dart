@@ -4,6 +4,7 @@ import 'package:flutter_riverpod_sample_app/data/task_list.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import 'ui/page/home_page.dart';
+import 'ui/page/random_number_page.dart';
 import 'data/task_list.dart';
 import 'data/task.dart';
 
@@ -45,7 +46,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomePage(),
+      home: const RandomNumberPage(),
     );
   }
 }
