@@ -14,13 +14,23 @@ class HomePage extends HookConsumerWidget {
     final tasks = ref.watch(taskListProvider);
 
     return Scaffold(
-        appBar: AppBar(
-          title: Text('タスク一覧'),
-        ),
-        body: ListView(
-          children: [
-            for (final task in tasks) ListItem(task: task),
-          ],
-        ));
+      appBar: AppBar(
+        title: Text('タスク一覧'),
+      ),
+      body: ListView(
+        children: [
+          TextField(),
+          for (final task in tasks) ListItem(task: task),
+        ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          ref.read(taskListProvider.notifier).addTask('add list');
+          // Add your onPressed code here!
+        },
+        backgroundColor: Colors.green,
+        child: const Icon(Icons.navigation),
+      ),
+    );
   }
 }

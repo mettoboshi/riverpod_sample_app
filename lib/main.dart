@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod_sample_app/data/status.dart';
-import 'package:flutter_riverpod_sample_app/data/task_list.dart';
+import 'package:flutter_riverpod_sample_app/data/task_notifier.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import 'ui/page/home_page.dart';
 import 'ui/page/random_number_page.dart';
-import 'data/task_list.dart';
+import 'data/task_notifier.dart';
 import 'data/task.dart';
 
 // 値（ここでは "Hello world"）を格納する「プロバイダ」を作成します。
@@ -19,8 +19,8 @@ final helloWorldProvider = Provider((_) => 'Hello world');
 //   return;
 // });
 
-final taskListProvider = StateNotifierProvider<TaskList, List<Task>>((ref) {
-  return TaskList([
+final taskListProvider = StateNotifierProvider<TaskNotifier, List<Task>>((ref) {
+  return TaskNotifier([
     Task('title1', Status.Todo),
     Task('title2', Status.Todo),
     Task('title3', Status.Todo),
@@ -46,7 +46,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const RandomNumberPage(),
+      home: const HomePage(),
     );
   }
 }

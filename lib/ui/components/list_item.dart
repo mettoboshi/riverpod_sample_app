@@ -9,10 +9,22 @@ class ListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 50,
-      color: Colors.blue,
-      child: Text(task.title),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Container(
+          height: 50,
+          color: Colors.white,
+          child: Text(task.title),
+        ),
+        Align(
+            alignment: Alignment.centerRight,
+            child: Container(
+              height: 50,
+              color: Colors.white,
+              child: Text(task.title),
+            ))
+      ],
     );
   }
 }
